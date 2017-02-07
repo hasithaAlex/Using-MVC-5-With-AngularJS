@@ -26,6 +26,16 @@ namespace Mvc5WithAngular
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+            
+            bundles.Add(new StyleBundle("~/bundles/CustomCSS").Include(
+                      "",
+                      ""));
+            bundles.Add(new ScriptBundle("~/bundles/CustomScript").Include(
+                        "",
+                        ""));
+
         }
     }
 }
