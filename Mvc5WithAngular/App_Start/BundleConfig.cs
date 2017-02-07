@@ -28,13 +28,17 @@ namespace Mvc5WithAngular
                       "~/Content/site.css"));
 
 
-            
-            bundles.Add(new StyleBundle("~/bundles/CustomCSS").Include(
-                      "",
-                      ""));
-            bundles.Add(new ScriptBundle("~/bundles/CustomScript").Include(
-                        "",
-                        ""));
+
+            bundles.Add(new StyleBundle("~/bundles/Phut/CustomStyle").Include(
+                      "~/Content/app.css",
+                      "~/Content/bootstrap.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Phut/CustomScript").Include(
+                        "~/Scripts/angular.js",
+                        "~/Scripts/angular-route.js",
+                        "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                        "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                        "~/app/phutapp.js"));
 
         }
     }
