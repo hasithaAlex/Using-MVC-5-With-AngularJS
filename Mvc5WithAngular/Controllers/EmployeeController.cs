@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.Net;
 
 namespace Mvc5WithAngular.Controllers
 {
@@ -31,8 +32,35 @@ namespace Mvc5WithAngular.Controllers
             return jsonResult;
         }
 
-        public ActionResult Create(EmployeeVM employee) {
-            return new HttpStatusCodeResult(201, "New Employee Added");
+        public ActionResult Create(EmployeeVM employee)
+        {
+            if (ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Created, "New Employee Added");
+            }
+
+            List<string> errors = new List<string>();
+            errors.Add("Insert failed.");
+            if (!ModelState.IsValidField("Name"))
+                errors.Add("Name must be at least 5 characters long.");
+
+            return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, String.Join(" ",errors));
+        }
+
+
+        public ActionResult Update(EmployeeVM employee)
+        {
+            if (ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Created, "Update success");
+            }
+
+            List<string> errors = new List<string>();
+            errors.Add("Insert failed.");
+            if (!ModelState.IsValidField("Name"))
+                errors.Add("Name must be at least 5 characters long.");
+
+            return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, String.Join(" ", errors));
         }
     }
 }
