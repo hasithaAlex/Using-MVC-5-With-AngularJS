@@ -14,7 +14,8 @@ namespace Mvc5WithAngular.App_Start
             configuration.Routes.MapHttpRoute("API Defaults", "api/{controller}/{id}", 
                 new { id = RouteParameter.Optional });
 
-
+            var appXmlType = configuration.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            configuration.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
         }
     }
 }
