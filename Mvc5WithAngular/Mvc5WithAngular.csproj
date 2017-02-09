@@ -148,18 +148,104 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmployeeVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\controllers\weatherContoller.js" />
+    <Content Include="app\css\.gitignore" />
+    <Content Include="app\css\app.css" />
+    <Content Include="app\css\bootstrap-united.css" />
+    <Content Include="app\css\bootstrap.css" />
+    <Content Include="app\css\bootstrap.min.css" />
+    <Content Include="app\favicon.ico" />
+    <Content Include="app\img\.gitignore" />
+    <Content Include="app\img\100x100.gif" />
+    <Content Include="app\img\150x150.gif" />
+    <Content Include="app\img\customer_bkg.jpg" />
+    <Content Include="app\img\glyphicons-halflings.png" />
+    <Content Include="app\img\restaurants\angular.jpg" />
+    <Content Include="app\img\restaurants\babythai.jpg" />
+    <Content Include="app\img\restaurants\bateaurouge.jpg" />
+    <Content Include="app\img\restaurants\beans.jpg" />
+    <Content Include="app\img\restaurants\beijing.jpg" />
+    <Content Include="app\img\restaurants\bhangra.jpg" />
+    <Content Include="app\img\restaurants\burgerama.jpg" />
+    <Content Include="app\img\restaurants\cancun.jpg" />
+    <Content Include="app\img\restaurants\carthage.jpg" />
+    <Content Include="app\img\restaurants\currygalore.jpg" />
+    <Content Include="app\img\restaurants\curryup.jpg" />
+    <Content Include="app\img\restaurants\czechpoint.jpg" />
+    <Content Include="app\img\restaurants\dragon.jpg" />
+    <Content Include="app\img\restaurants\esthers.jpg" />
+    <Content Include="app\img\restaurants\flavia.jpg" />
+    <Content Include="app\img\restaurants\jeeves.jpg" />
+    <Content Include="app\img\restaurants\khartoum.jpg" />
+    <Content Include="app\img\restaurants\kohlhaus.jpg" />
+    <Content Include="app\img\restaurants\littlepigs.jpg" />
+    <Content Include="app\img\restaurants\littleprague.jpg" />
+    <Content Include="app\img\restaurants\luigis.jpg" />
+    <Content Include="app\img\restaurants\naansequitur.jpg" />
+    <Content Include="app\img\restaurants\north.jpg" />
+    <Content Include="app\img\restaurants\pedros.jpg" />
+    <Content Include="app\img\restaurants\pizza76.jpg" />
+    <Content Include="app\img\restaurants\robatayaki.jpg" />
+    <Content Include="app\img\restaurants\sakura.jpg" />
+    <Content Include="app\img\restaurants\sallys.jpg" />
+    <Content Include="app\img\restaurants\satay.jpg" />
+    <Content Include="app\img\restaurants\saucy.jpg" />
+    <Content Include="app\img\restaurants\shandong.jpg" />
+    <Content Include="app\img\restaurants\speisewagen.jpg" />
+    <Content Include="app\img\restaurants\superwonton.jpg" />
+    <Content Include="app\img\restaurants\taqueria.jpg" />
+    <Content Include="app\img\restaurants\thick.jpg" />
+    <Content Include="app\img\restaurants\tofuparadise.jpg" />
+    <Content Include="app\img\restaurants\wheninrome.jpg" />
+    <Content Include="app\img\restaurants\wholetamale.jpg" />
+    <Content Include="app\img\restaurants\zardoz.jpg" />
     <Content Include="app\index.html" />
-    <Content Include="app\phutapp.js" />
-    <Content Include="app\services\forecastService.js" />
-    <Content Include="app\services\readJsonFileService.js" />
+    <Content Include="app\js\app.js" />
+    <Content Include="app\js\controllers\CheckoutController.js" />
+    <Content Include="app\js\controllers\CustomerController.js" />
+    <Content Include="app\js\controllers\MenuController.js" />
+    <Content Include="app\js\controllers\NavbarController.js" />
+    <Content Include="app\js\controllers\RestaurantsController.js" />
+    <Content Include="app\js\controllers\ThankYouController.js" />
+    <Content Include="app\js\directives\fmCheckboxList.js" />
+    <Content Include="app\js\directives\fmDeliverTo.html" />
+    <Content Include="app\js\directives\fmDeliverTo.js" />
+    <Content Include="app\js\directives\fmRating.js" />
+    <Content Include="app\js\filters\dollars.js" />
+    <Content Include="app\js\filters\stars.js" />
+    <Content Include="app\js\services\alert.js" />
+    <Content Include="app\js\services\cart.js" />
+    <Content Include="app\js\services\customer.js" />
+    <Content Include="app\js\services\localStorage.js" />
+    <Content Include="app\js\services\Restaurant.js" />
+    <Content Include="app\lib\angular\angular-cookies.js" />
+    <Content Include="app\lib\angular\angular-cookies.min.js" />
+    <Content Include="app\lib\angular\angular-loader.js" />
+    <Content Include="app\lib\angular\angular-loader.min.js" />
+    <Content Include="app\lib\angular\angular-resource.js" />
+    <Content Include="app\lib\angular\angular-resource.min.js" />
+    <Content Include="app\lib\angular\angular-sanitize.js" />
+    <Content Include="app\lib\angular\angular-sanitize.min.js" />
+    <Content Include="app\lib\angular\angular.js" />
+    <Content Include="app\lib\angular\angular.min.js" />
+    <Content Include="app\lib\angular\version.txt" />
+    <Content Include="app\views\.gitignore" />
+    <Content Include="app\views\checkout.html" />
+    <Content Include="app\views\customer.html" />
+    <Content Include="app\views\help.html" />
+    <Content Include="app\views\how-it-works.html" />
+    <Content Include="app\views\menu.html" />
+    <Content Include="app\views\restaurants.html" />
+    <Content Include="app\views\thank-you.html" />
+    <Content Include="app\views\who-we-are.html" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -184,6 +270,8 @@
     </Content>
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="app\css\Ubuntu.font" />
+    <Content Include="app\css\Ubuntu.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -213,7 +301,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Employee\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

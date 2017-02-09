@@ -40,6 +40,11 @@ namespace Mvc5WithAngular
                         "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
                         "~/app/phutapp.js"));
 
+
+
+            bundles.Add(new ScriptBundle("~/bundles/Phut/studentScript").Include(
+                        "~/app/controllers/studentController.js"));
+
         }
     }
 }
